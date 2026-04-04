@@ -1,0 +1,660 @@
+/* =============================================
+   LAYOUT
+   ============================================= */
+.main {
+  background: #111;
+  min-height: 100vh;
+  color: #e0e0e0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  margin-bottom: 80px;
+}
+
+/* =============================================
+   SECTION TITLE
+   ============================================= */
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+
+.sectionTitleAccent {
+  color: #25c2a0;
+  margin-right: 8px;
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 0 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 80px;
+}
+
+.heroAvatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #25c2a0;
+  overflow: hidden;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(37, 194, 160, 0.1);
+  box-shadow: 0 0 30px rgba(37, 194, 160, 0.2);
+}
+
+.heroAvatarPlaceholder {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #25c2a0;
+  letter-spacing: 2px;
+}
+
+.heroName {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #fff;
+  margin: 0 0 8px;
+  letter-spacing: 2px;
+}
+
+.heroTitle {
+  font-size: 1rem;
+  color: #25c2a0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+}
+
+.heroBio {
+  font-size: 1.05rem;
+  color: #aaa;
+  max-width: 580px;
+  line-height: 1.8;
+  margin: 0 0 36px;
+}
+
+.heroCtas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ctaPrimary {
+  background: #25c2a0;
+  color: #111 !important;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.ctaPrimary:hover {
+  background: #1fa588;
+  transform: translateY(-2px);
+}
+
+.ctaSecondary {
+  background: transparent;
+  color: #fff !important;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.ctaSecondary:hover {
+  border-color: #25c2a0;
+  color: #25c2a0 !important;
+  transform: translateY(-2px);
+}
+
+/* =============================================
+   SKILLS
+   ============================================= */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.skillCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  transition: border-color 0.2s, background 0.2s;
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block;
+}
+
+.skillCard:hover {
+  border-color: rgba(37, 194, 160, 0.4);
+  background: rgba(37, 194, 160, 0.04);
+}
+
+.skillCardArrow {
+  margin-left: 8px;
+  font-size: 0.85rem;
+  color: #25c2a0;
+  opacity: 0;
+  transform: translateX(-4px);
+  display: inline-block;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.skillCard:hover .skillCardArrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.skillCategory {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #25c2a0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 14px;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skillTag {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ccc;
+  font-size: 0.82rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-decoration: none !important;
+}
+
+/* Tag có link — highlight riêng khi hover */
+.skillTagLink {
+  position: relative;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.skillTagLink:hover {
+  background: rgba(37, 194, 160, 0.15);
+  border-color: rgba(37, 194, 160, 0.5);
+  color: #25c2a0 !important;
+}
+
+/* Tooltip "Xem series →" */
+.skillTagLink::after {
+  content: attr(title);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) scale(0.85);
+  background: #1e2a28;
+  color: #25c2a0;
+  border: 1px solid rgba(37, 194, 160, 0.4);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  padding: 4px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s, transform 0.15s;
+  z-index: 10;
+}
+
+.skillTagLink:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* =============================================
+   CERTIFICATIONS — 3D CAROUSEL
+   ============================================= */
+.certCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(37, 194, 160, 0.15);
+  border: 1px solid rgba(37, 194, 160, 0.4);
+  color: #25c2a0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+
+.gallerySection {
+  margin-bottom: 80px;
+}
+
+.gallerySubtitle {
+  color: #555;
+  font-size: 0.82rem;
+  text-align: center;
+  margin: -20px 0 0;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+/* Wrapper cắt overflow ngang */
+.carouselWrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0 80px;
+}
+
+/* Điểm nhìn perspective */
+.carouselScene {
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+}
+
+/* Hình trụ xoay — transform-style: preserve-3d là then chốt */
+.carouselTrack {
+  width: 160px;
+  height: 220px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: carouselSpin 32s linear infinite;
+  cursor: grab;
+}
+
+.carouselTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes carouselSpin {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(-360deg); }
+}
+
+/* Mỗi mặt của hình trụ */
+.certFace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 220px;
+}
+
+.certFaceInner {
+  width: 100%;
+  height: 100%;
+  background: #13131f;
+  border: 1px solid;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.04) inset,
+    0 8px 32px rgba(0,0,0,0.6);
+}
+
+.certFaceImageWrap {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+
+.certFaceImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+}
+
+.certFaceCategory {
+  font-size: 0.58rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+}
+
+.certFaceBody {
+  flex: 1;
+  padding: 10px 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: space-between;
+}
+
+.certFaceName {
+  font-size: 0.76rem;
+  color: #ddd;
+  line-height: 1.5;
+  font-weight: 600;
+  margin: 0;
+}
+
+.certFaceYear {
+  font-size: 0.68rem;
+  color: #555;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* Thanh màu glow ở đáy mỗi card */
+.certFaceGlow {
+  height: 3px;
+  opacity: 0.7;
+}
+
+/* Bóng đổ xuống "sàn" */
+.carouselFloorShadow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 40px;
+  background: radial-gradient(ellipse, rgba(0,0,0,0.6) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* =============================================
+   PROJECTS
+   ============================================= */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 20px;
+}
+
+.projectCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  text-decoration: none !important;
+  color: inherit !important;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+
+.projectCard:hover {
+  border-color: rgba(37, 194, 160, 0.5);
+  background: rgba(37, 194, 160, 0.05);
+  transform: translateY(-4px);
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projectEmoji {
+  font-size: 2rem;
+}
+
+.statusBadge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.statusLive {
+  background: rgba(37, 194, 160, 0.15);
+  color: #25c2a0;
+  border: 1px solid rgba(37, 194, 160, 0.4);
+}
+
+.statusInProgress {
+  background: rgba(255, 200, 0, 0.1);
+  color: #ffc800;
+  border: 1px solid rgba(255, 200, 0, 0.3);
+}
+
+.statusProduction {
+  background: rgba(100, 150, 255, 0.1);
+  color: #8aabff;
+  border: 1px solid rgba(100, 150, 255, 0.3);
+}
+
+.statusOpenSource {
+  background: rgba(200, 100, 255, 0.1);
+  color: #c878ff;
+  border: 1px solid rgba(200, 100, 255, 0.3);
+}
+
+.projectName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.projectDescription {
+  font-size: 0.9rem;
+  color: #999;
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.projectTag {
+  background: rgba(37, 194, 160, 0.08);
+  border: 1px solid rgba(37, 194, 160, 0.2);
+  color: #25c2a0;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* =============================================
+   EXPERIENCE / TIMELINE
+   ============================================= */
+.timeline {
+  position: relative;
+  padding-left: 28px;
+  border-left: 2px solid rgba(37, 194, 160, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.timelineItem {
+  position: relative;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -37px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #25c2a0;
+  border: 2px solid #111;
+  box-shadow: 0 0 10px rgba(37, 194, 160, 0.5);
+}
+
+.timelineContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timelinePeriod {
+  font-size: 0.8rem;
+  color: #25c2a0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.timelineRole {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.timelineCompany {
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+}
+
+.timelineDesc {
+  font-size: 0.92rem;
+  color: #aaa;
+  line-height: 1.7;
+  margin: 8px 0 0;
+}
+
+/* =============================================
+   CONTACT
+   ============================================= */
+.contactSection {
+  text-align: center;
+}
+
+.contactSubtitle {
+  color: #aaa;
+  font-size: 1rem;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ccc !important;
+  text-decoration: none !important;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.contactLink:hover {
+  border-color: #25c2a0;
+  color: #25c2a0 !important;
+  transform: translateY(-2px);
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 768px) {
+  .heroName {
+    font-size: 2rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 48px 24px;
+    transform: none; /* tắt rotateX trên mobile */
+  }
+
+  .galleryRoom {
+    padding: 0 16px;
+  }
+
+  .frameOuter {
+    width: 120px;
+    height: 155px;
+  }
+
+  .museumLabel {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCtas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    text-align: center;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 12px;
+  }
+}

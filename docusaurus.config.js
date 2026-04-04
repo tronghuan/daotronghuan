@@ -37,7 +37,7 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'vi',
-    locales: ['vi', 'jp', 'en'],
+    locales: ['vi'],
   },
 
   // 1. Kích hoạt render Mermaid trong các file Markdown

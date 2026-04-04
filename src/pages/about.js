@@ -70,27 +70,35 @@ const SKILLS = [
 ];
 
 const CERT_IMAGES = [
-  '/img/certs/Associate.png',
-  '/img/certs/Associate_Big.png',
-  '/img/certs/CMPA.png',
-  '/img/certs/MCD1.png',
-  '/img/certs/MCD2.png',
-  '/img/certs/MCIA.png',
+  '/img/certs/2025-03_Badge_SF-Certified_Platform-Admin_High-Res.png',        // 0  - Administrator
+  '/img/certs/2025-03_Badge_SF-Certified_Platform-Foundations_High-Res.png',  // 1  - Associate
+  '/img/certs/2025-03_Badge_SF-Certified_MS-Dev_High-Res.png',                // 2  - MuleSoft Developer I
+  '/img/certs/2025-04_Badge_SF-Certified_Plat-Dev_High-Res.png',              // 3  - Platform Developer I
+  '/img/certs/2025-03_Badge_SF-Certified_MS-Plat-Int-Arch_High-Res.png',      // 4  - MuleSoft Integration Architect I
+  '/img/certs/2021-03_Badge_SF-Certified_Platform-App-Builder_High-Res.png',  // 5  - Platform App Builder
+  '/img/certs/2026-01_Badge_SF-Certified_AI-Associate_High-Res.png',          // 6  - AI Associate
+  '/img/certs/2026-01_Badge_SF-Certified_D360-Con_High-Res.png',              // 7  - Data Cloud Consultant
+  '/img/certs/2025-03_Badge_SF-Certified_Plat-Integration-Arch_High-Res.png', // 8  - Integration Architect
+  '/img/certs/2024-02_SF-Cert-Badge_MuleSoft-Developer-II.png',               // 9  - MuleSoft Developer II
+  '/img/certs/2025-02_Badge_SF-Certified_Agentforce-Specialist_High-Res.png', // 10 - Agentforce Specialist
+  '/img/certs/2025-03_Badge_SF-Certified_Plat-Data-Arch_High-Res.png',        // 11 - Data Architect
+  '/img/certs/2025-03_MASTER_Certification-Badges_JavaScript-Dev.png',        // 12 - JavaScript Developer I
 ];
 
 const CERTIFICATIONS = [
-  { name: 'Salesforce Certified Administrator',               year: '2022/10', category: 'Admin',     img: CERT_IMAGES[0] },
-  { name: 'Salesforce Certified Associate',                   year: '2022/10', category: 'Admin',     img: CERT_IMAGES[1] },
-  { name: 'Salesforce Certified MuleSoft Developer I',        year: '2022/10', category: 'MuleSoft',  img: CERT_IMAGES[3] },
-  { name: 'Salesforce Certified Platform Developer I',        year: '2022/11', category: 'Developer', img: CERT_IMAGES[2] },
-  { name: 'Salesforce Certified MuleSoft Integration Architect I', year: '2022/11', category: 'MuleSoft',  img: CERT_IMAGES[5] },
-  { name: 'Salesforce Platform App Builder',                  year: '2023/02', category: 'Developer', img: CERT_IMAGES[0] },
-  { name: 'Salesforce Certified AI Associate',                year: '2024/03', category: 'AI',        img: CERT_IMAGES[1] },
-  { name: 'Salesforce Certified Data Cloud Consultant',       year: '2024/06', category: 'Data',      img: CERT_IMAGES[2] },
-  { name: 'Salesforce Certified Integration Architect',       year: '2024/06', category: 'Architect', img: CERT_IMAGES[4] },
-  { name: 'Salesforce Certified MuleSoft Developer II',       year: '2024/07', category: 'MuleSoft',  img: CERT_IMAGES[4] },
-  { name: 'Salesforce Certified AI Specialist',               year: '2024/09', category: 'AI',        img: CERT_IMAGES[3] },
-  { name: 'Salesforce Certified Data Architect',              year: '2024/10', category: 'Architect', img: CERT_IMAGES[5] },
+  { name: 'Salesforce Certified Administrator',                    year: '2022/10', category: 'Admin',     img: CERT_IMAGES[0]  },
+  { name: 'Salesforce Certified Associate',                        year: '2022/10', category: 'Admin',     img: CERT_IMAGES[1]  },
+  { name: 'Salesforce Certified MuleSoft Developer I',             year: '2022/10', category: 'MuleSoft',  img: CERT_IMAGES[2]  },
+  { name: 'Salesforce Certified Platform Developer I',             year: '2022/11', category: 'Developer', img: CERT_IMAGES[3]  },
+  { name: 'Salesforce Certified MuleSoft Integration Architect I', year: '2022/11', category: 'MuleSoft',  img: CERT_IMAGES[4]  },
+  { name: 'Salesforce Platform App Builder',                       year: '2023/02', category: 'Developer', img: CERT_IMAGES[5]  },
+  { name: 'Salesforce Certified AI Associate',                     year: '2024/03', category: 'AI',        img: CERT_IMAGES[6]  },
+  { name: 'Salesforce Certified Data Cloud Consultant',            year: '2024/06', category: 'Data',      img: CERT_IMAGES[7]  },
+  { name: 'Salesforce Certified Integration Architect',            year: '2024/06', category: 'Architect', img: CERT_IMAGES[8]  },
+  { name: 'Salesforce Certified MuleSoft Developer II',            year: '2024/07', category: 'MuleSoft',  img: CERT_IMAGES[9]  },
+  { name: 'Salesforce Certified Agentforce Specialist',            year: '2024/09', category: 'AI',        img: CERT_IMAGES[10] },
+  { name: 'Salesforce Certified Data Architect',                   year: '2024/10', category: 'Architect', img: CERT_IMAGES[11] },
+  { name: 'Salesforce Certified JavaScript Developer I',           year: '2025/03', category: 'Developer', img: CERT_IMAGES[12] },
 ];
 
 const CERT_CATEGORY_COLORS = {
@@ -253,7 +261,7 @@ function StatusBadge({ status }) {
   );
 }
 
-const TOTAL = CERTIFICATIONS.length;         // 12
+const TOTAL = CERTIFICATIONS.length;         // 13
 const ANGLE_STEP = 360 / TOTAL;              // 30deg mỗi card
 const RADIUS = 360;                          // px — bán kính hình trụ
 

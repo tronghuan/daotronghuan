@@ -5,7 +5,7 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 We recommend that you begin by typing:
 
 ```bash
-cd my-website
+cd daotronghuan
 npm start
 ```
 

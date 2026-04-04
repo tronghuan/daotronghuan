@@ -59,6 +59,17 @@ const SKILLS = [
     ],
   },
   {
+    category: 'Quản lý dự án',
+    link: '/docs/project-management',
+    items: [
+      { name: 'Lập kế hoạch dự án',  link: '/docs/project-management/planning' },
+      { name: 'Quản lý yêu cầu',     link: '/docs/project-management/requirements' },
+      { name: 'Quản lý tiến độ',     link: '/docs/project-management/progress' },
+      { name: 'Quản lý rủi ro',      link: '/docs/project-management/risk' },
+      { name: 'Tài liệu & báo cáo',  link: '/docs/project-management/documentation' },
+    ],
+  },
+  {
     category: 'Ngôn ngữ',
     link: null,
     items: [

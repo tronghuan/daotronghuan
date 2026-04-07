@@ -1,55 +1,47 @@
 ---
+title: Giới thiệu
+description: Tổng quan về các series kỹ thuật trên daotronghuan.com — Salesforce, Backend, Frontend, DevOps, AI.
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Series Tech — Tổng quan
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Chào mừng bạn đến với góc kỹ thuật của **Đào Trọng Huấn**.
 
-## Getting Started
+Đây là nơi tôi tổng hợp kiến thức và kinh nghiệm thực tế từ công việc — viết lại để dễ tra cứu và chia sẻ với cộng đồng.
 
-Get started by **creating a new site**.
+## Các series hiện có
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### ☁️ Salesforce
+Từ Apex, LWC, Flow đến kiến trúc tích hợp enterprise.
 
-### What you'll need
+➜ [Xem series Salesforce](/docs/salesforce)
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### 🖥️ Backend
+Node.js, Python, thiết kế REST API và GraphQL.
 
-## Generate a new site
+➜ [Xem series Backend](/docs/backend)
 
-Generate a new Docusaurus site using the **classic template**.
+### 🎨 Frontend
+React, JavaScript, TypeScript và HTML/CSS.
 
-The classic template will automatically be added to your project after you run the command:
+➜ [Xem series Frontend](/docs/frontend)
 
-```bash
-npm init docusaurus@latest daotronghuan classic
-```
+### 🛠️ DevOps & Tools
+Git, Docker, CI/CD và AWS.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+➜ [Xem series DevOps](/docs/devops)
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+### 🤖 AI & Productivity
+Claude, Cursor và Prompt Engineering cho developer.
 
-## Start your site
+➜ [Xem series AI](/docs/ai)
 
-Run the development server:
+### 📋 Quản lý dự án
+Lập kế hoạch, quản lý yêu cầu, tiến độ và rủi ro.
 
-```bash
-cd daotronghuan
-npm run start
-```
+➜ [Xem series Quản lý dự án](/docs/project-management)
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+---
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
-
-
-```mermaid
-graph TD;
-    A[Giao diện Web]-->B(Hệ thống Backend);
-    B-->C{Database};
-    C-->|Có Data|D[Hiển thị kết quả];
-    C-->|Không có Data|E[Báo lỗi];
+> Nội dung được cập nhật liên tục. Nếu bạn thấy hữu ích, hãy chia sẻ cho người khác nhé!

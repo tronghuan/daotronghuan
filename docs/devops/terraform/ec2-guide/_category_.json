@@ -1,0 +1,8 @@
+{
+  "label": "Thực hành: EC2 với Terraform",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "Series thực hành từng bước: provision EC2 trên AWS bằng Terraform — từ setup đến Git workflow chuẩn cho team."
+  }
+}

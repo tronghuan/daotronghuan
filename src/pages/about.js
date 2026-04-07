@@ -43,10 +43,11 @@ const SKILLS = [
     category: 'DevOps & Tools',
     link: '/docs/devops',
     items: [
-      { name: 'Git',    link: '/docs/devops/git' },
-      { name: 'Docker', link: '/docs/devops/docker' },
-      { name: 'CI/CD',  link: '/docs/devops/cicd' },
-      { name: 'AWS',    link: '/docs/devops/aws' },
+      { name: 'Git',       link: '/docs/devops/git' },
+      { name: 'Docker',    link: '/docs/devops/docker' },
+      { name: 'CI/CD',     link: '/docs/devops/cicd' },
+      { name: 'AWS',       link: '/docs/devops/aws' },
+      { name: 'Terraform', link: '/docs/devops/terraform' },
     ],
   },
   {

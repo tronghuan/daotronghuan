@@ -53,8 +53,8 @@ const SKILLS = [
     category: 'AI & Productivity',
     link: '/docs/ai',
     items: [
-      { name: 'Claude',              link: '/docs/ai/claude' },
-      { name: 'Cursor',              link: '/docs/ai/cursor' },
+      { name: 'Claude',              link: '/docs/ai/ai-chat/claude-ai' },
+      { name: 'Cursor',              link: '/docs/ai/ai-code-editor/cursor' },
       { name: 'Prompt Engineering',  link: '/docs/ai/prompt-engineering' },
     ],
   },

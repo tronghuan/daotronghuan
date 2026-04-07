@@ -1,0 +1,8 @@
+{
+  "label": "AI Chat",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Dùng AI Chat để tư duy, giải thích code và brainstorm — Claude.ai, ChatGPT, Gemini."
+  }
+}

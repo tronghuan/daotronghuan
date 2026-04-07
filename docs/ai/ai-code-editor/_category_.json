@@ -1,0 +1,8 @@
+{
+  "label": "AI Code Editor",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "AI tích hợp trực tiếp vào editor — viết code inline, hiểu cả codebase, refactor nhanh với Cursor, Windsurf, GitHub Copilot."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "AI Coding Agent",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "AI tự động thực hiện nhiều bước liên tiếp trong terminal — Claude Code, Aider, Gemini CLI cho các task lớn và phức tạp."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "AI API",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Tích hợp AI vào sản phẩm của mình — xây dựng AI features với Claude API, OpenAI API."
+  }
+}

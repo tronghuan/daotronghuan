@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdaotronghuan=globalThis.webpackChunkdaotronghuan||[]).push([[3215],{7646(n){n.exports=JSON.parse('{"tags":[{"label":"Ti\u1ebfng Nh\u1eadt","permalink":"/blog/tags/tieng-nhat","description":"H\xe0nh tr\xecnh h\u1ecdc ti\u1ebfng Nh\u1eadt t\u1eeb N5 \u0111\u1ebfn N3","count":1}]}')}}]);

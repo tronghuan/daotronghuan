@@ -1,19 +1,44 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+salesforce:
+  label: Salesforce
+  permalink: /salesforce
+  description: Bài viết về Salesforce development, admin và kiến trúc
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+apex:
+  label: Apex
+  permalink: /apex
+  description: Salesforce Apex programming
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+lwc:
+  label: LWC
+  permalink: /lwc
+  description: Lightning Web Components
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+mulesoft:
+  label: MuleSoft
+  permalink: /mulesoft
+  description: MuleSoft integration platform
+
+backend:
+  label: Backend
+  permalink: /backend
+  description: Backend development — Node.js, Python, API
+
+devops:
+  label: DevOps
+  permalink: /devops
+  description: DevOps, CI/CD, Docker, Cloud
+
+ai:
+  label: AI
+  permalink: /ai
+  description: AI tools, prompt engineering, Claude, Cursor
+
+tieng-nhat:
+  label: Tiếng Nhật
+  permalink: /tieng-nhat
+  description: Hành trình học tiếng Nhật từ N5 đến N3
+
+cuoc-song:
+  label: Cuộc sống
+  permalink: /cuoc-song
+  description: Chia sẻ về cuộc sống và suy nghĩ cá nhân

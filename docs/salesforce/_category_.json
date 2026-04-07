@@ -1,0 +1,8 @@
+{
+  "label": "Salesforce",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Tài liệu về Salesforce development, admin và kiến trúc — Apex, LWC, Flow, Integration."
+  }
+}

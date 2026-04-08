@@ -8,6 +8,53 @@ Trong Retail và E-commerce, dữ liệu khách hàng thường nằm rải rác
 
 Đây là bài thực hành cấp trung — bạn nên đọc qua [tMap chi tiết](./tmap-chi-tiet.md) và [kết nối database](./ket-noi-database.md) trước khi bắt đầu.
 
+```mermaid
+graph TD
+    subgraph "Nguồn dữ liệu (Multi-Source)"
+        A1[(MySQL: POS\nTransactions)]
+        A2[Excel/CSV: Marketing\nMembers]
+        A3[REST API: Logistics\nRefund Stats]
+    end
+
+    subgraph "Tiền xử lý (Pre-Processing)"
+        B1[tPrejob] --> B2[tJava: Initialize Log]
+        B2 --> B3[tSetContext: Load Config\ndev / prod]
+    end
+
+    subgraph "Luồng xử lý chính (Core ETL Engine)"
+        A1 --> C1[tMap: Left Outer Join\n+ Chuẩn hóa phone/tên]
+        A2 --> C1
+
+        C1 -- "Dữ liệu thô" --> C2[tFilterRow\nLoại LTV ≤ 0]
+        C2 --> C3[tJavaFlex: Validate Email\n+ Archive Rejected]
+
+        subgraph "API Lookup"
+            C3 -- "Valid" --> D1[tFlowToIterate]
+            C3 -- "Invalid" --> D2[tFileOutputDelimited\nrejected_customers.csv]
+            D1 --> D3[tRESTClient\nGET /orders/id/stats]
+        end
+
+        D3 --> D4[tJavaRow: Scoring Engine\nLTV bonus · Refund penalty\n→ GOLD / SILVER / BRONZE]
+    end
+
+    subgraph "Kết quả & Hậu xử lý (Output)"
+        D4 --> E1[(tPostgresqlOutput\ncustomer_360)]
+        D4 --> E2[tFileOutputJSON\nCustomer_Report_timestamp.json]
+        E1 --> F1[tStatCatcher\nGhi metrics vào etl_logs]
+        F1 --> F2[tPostjob\nClean temp files]
+    end
+
+    subgraph "Xử lý lỗi (Error Handling)"
+        ERR[tLogCatcher] --> MAIL[tSendMail\nAlert on failure]
+    end
+
+    style C3 fill:#f96,stroke:#333,stroke-width:2px
+    style D4 fill:#f96,stroke:#333,stroke-width:2px
+    style B3 fill:#bbf,stroke:#333
+    style D2 fill:#fdd,stroke:#c33
+    style ERR fill:#fdd,stroke:#c33
+```
+
 ## Tổng quan bài toán
 
 Mỗi ngày, team Data cần cập nhật bảng `customer_360` trong PostgreSQL để Marketing có thể segment khách hàng theo tier. Pipeline cần:

@@ -1,0 +1,8 @@
+{
+  "label": "Thực chiến (Scenarios)",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "description": "Các kịch bản ETL thực tế với Talend — từ thiết kế đến triển khai"
+  }
+}

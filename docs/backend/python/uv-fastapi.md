@@ -1,7 +1,7 @@
 ---
 title: Python — Cài đặt môi trường và uv
 description: Hướng dẫn cài đặt Python, quản lý version bằng uv, tạo ứng dụng FastAPI và chạy với Docker.
-sidebar_position: 2
+sidebar_position: 11
 ---
 
 # Python — Cài đặt môi trường và uv

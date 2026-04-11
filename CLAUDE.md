@@ -56,6 +56,39 @@ Các quyết định, tính năng và context được lưu trong `.claude/memor
 - **Template**: `.claude/memory/_template.md` — dùng khi thêm memory mới
 - **Categories**: `decisions/`, `features/`, `issues/`, `context/`, `references/`
 
+## Tự động lưu bài học sau khi fix lỗi
+
+**Quy tắc bắt buộc:** Sau khi gặp và fix bất kỳ lỗi nào có khả năng lặp lại ở session sau, phải lưu ngay vào auto-memory tại `C:\Users\huand\.claude\projects\c--Users-huand-Documents-daotronghuan\memory\`.
+
+**Khi nào cần lưu:**
+- Lỗi build/deploy (broken links, config sai, missing file...)
+- Lỗi do đặc thù của tool/framework (như Docusaurus trailing slash)
+- Pattern fix lặp đi lặp lại trong cùng session
+- Bất kỳ lúc nào phải sửa đi sửa lại cùng một vấn đề
+
+**Cách lưu — 2 bước bắt buộc:**
+
+1. Tạo file memory `feedback_<ten_van_de>.md`:
+```markdown
+---
+name: <tên ngắn gọn>
+description: <một câu mô tả — dùng để quyết định có load không>
+type: feedback
+---
+<Rule/fact>
+
+**Why:** <nguyên nhân gốc rễ>
+
+**How to apply:** <khi nào áp dụng, cụ thể>
+```
+
+2. Thêm một dòng vào `MEMORY.md`:
+```
+- [Tên](feedback_ten_van_de.md) — mô tả ngắn để nhận diện nhanh
+```
+
+**Không cần hỏi người dùng** trước khi lưu — cứ lưu rồi thông báo đã lưu.
+
 ## Lưu ý quan trọng
 
 - Ngôn ngữ chính: **Tiếng Việt** (nội dung blog/docs), **English** (code, config)

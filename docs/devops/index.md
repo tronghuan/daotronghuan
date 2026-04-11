@@ -12,5 +12,6 @@ Series tài liệu về DevOps và công cụ phát triển phần mềm.
 
 - **Git** — Version control
 - **Docker** — Containerization
+- **Podman** — Container engine rootless, không cần daemon
 - **CI/CD** — Tự động hóa quy trình phát triển
 - **AWS** — Amazon Web Services

@@ -1,0 +1,8 @@
+{
+  "label": "Podman",
+  "position": 6,
+  "link": {
+    "type": "generated-index",
+    "description": "Hướng dẫn Podman từ A–Z — cài đặt, lệnh cơ bản, Podman Compose và so sánh với Docker."
+  }
+}

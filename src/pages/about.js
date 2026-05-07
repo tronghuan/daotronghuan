@@ -24,7 +24,7 @@ const SKILLS = [
     link: '/docs/backend',
     items: [
       { name: 'Node.js',  link: '/docs/backend/nodejs' },
-      { name: 'Python',   link: '/docs/backend/python' },
+      { name: 'Python',   link: '/docs/backend/python/intro' },
       { name: 'REST API', link: '/docs/backend/rest-api' },
       { name: 'GraphQL',  link: '/docs/backend/graphql' },
     ],

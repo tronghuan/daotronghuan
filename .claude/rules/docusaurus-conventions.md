@@ -8,6 +8,36 @@
 ## Cấu trúc URL
 - Blog: `/blog/<slug>` — slug lấy từ frontmatter hoặc tên file
 - Docs: `/docs/<path>` — path theo cấu trúc folder
+
+## Relative Links trong Docs — Quy tắc bắt buộc
+
+Docusaurus thêm trailing slash vào URL của mỗi doc page. Vì vậy khi dùng relative link, đường dẫn được resolve từ "thư mục ảo" của page đó, **không phải từ thư mục file thực**.
+
+**Ví dụ sai (broken link):**
+```
+File: docs/devops/mulesoft/cai-dat.md
+URL:  /docs/devops/mulesoft/cai-dat/
+
+Link: [Giao diện](./giao-dien)
+Resolve thành: /docs/devops/mulesoft/cai-dat/giao-dien/  ← SAI
+```
+
+**Quy tắc đúng — link đến file cùng thư mục (sibling):**
+```markdown
+<!-- Dùng ../ thay vì ./ khi link đến sibling docs -->
+[Giao diện](../giao-dien)        ✅ → /docs/devops/mulesoft/giao-dien/
+[Giao diện](./giao-dien)         ❌ → /docs/devops/mulesoft/cai-dat/giao-dien/
+```
+
+**Tóm tắt rule:**
+| Link từ | Link đến | Dùng |
+|:---|:---|:---|
+| `folder/file-a.md` | `folder/file-b.md` (cùng folder) | `../file-b` |
+| `folder/file-a.md` | `folder/sub/file-c.md` (sub-folder) | `./sub/file-c` |
+| `folder/sub/file-c.md` | `folder/file-a.md` (lên trên) | `../../file-a` |
+| `folder/index.md` | `folder/file-b.md` (con của index) | `./file-b` ✅ (index là ngoại lệ) |
+
+**Index page là ngoại lệ:** `index.md` được serve tại `/docs/folder/` (không có trailing "index") nên `./file-b` từ index.md resolve đúng.
 - Pages: `/<filename>` — từ `src/pages/`
 
 ## Blog

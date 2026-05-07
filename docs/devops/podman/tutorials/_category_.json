@@ -1,0 +1,8 @@
+{
+  "label": "Tutorials",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Các hướng dẫn thực hành Podman từ A–Z — từ local development đến CI/CD và production deployment."
+  }
+}

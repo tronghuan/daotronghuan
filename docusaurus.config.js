@@ -108,7 +108,7 @@ const config = {
       navbar: {
         title: 'Đào Trọng Huấn', // Tên hiển thị góc trái
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Đào Trọng Huấn',
           src: 'img/logo.svg', // Bạn có thể thay file logo.svg của riêng mình vào thư mục static/img sau
         },
         items: [

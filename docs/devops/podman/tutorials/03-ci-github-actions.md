@@ -25,7 +25,7 @@ Không dùng password trực tiếp — hãy tạo **Access Token** riêng cho C
 
 1. Đăng nhập [hub.docker.com](https://hub.docker.com)
 2. Vào **Account Settings** → **Security** → **New Access Token**
-3. Đặt tên token: `github-actions-khotruyen`
+3. Đặt tên token: `github-actions-my-app`
 4. Chọn quyền **Read & Write**
 5. **Copy token ngay** — chỉ hiện một lần
 
@@ -80,7 +80,7 @@ jobs:
         with:
           context: ./app
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/khotruyen-ai:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest
 ```
 
 :::note Giải thích workflow
@@ -108,7 +108,7 @@ Sau khi push, vào tab **Actions** trên GitHub để xem pipeline chạy:
 ✅ Build and Push Image  ~60–120s
 ```
 
-Kiểm tra Docker Hub — Image `your-username/khotruyen-ai:latest` đã xuất hiện.
+Kiểm tra Docker Hub — Image `your-username/my-app:latest` đã xuất hiện.
 
 ---
 

@@ -47,8 +47,8 @@ File này chứa cấu hình **thực tế** cho production. **Không bao giờ 
 ```env title=".env.prod"
 DB_USER=postgres
 DB_PASSWORD=super_secure_password_prod
-DB_NAME=khotruyen_prod_db
-DATABASE_URL=postgresql://postgres:super_secure_password_prod@db:5432/khotruyen_prod_db
+DB_NAME=my_app_prod_db
+DATABASE_URL=postgresql://postgres:super_secure_password_prod@db:5432/my_app_prod_db
 ```
 
 :::warning Bảo mật
@@ -73,7 +73,7 @@ services:
     restart: always
 
   python_app:
-    image: docker.io/YOUR_DOCKERHUB_USERNAME/khotruyen-ai:latest
+    image: docker.io/YOUR_DOCKERHUB_USERNAME/my-app:latest
     container_name: prod_python
     pull_policy: always          # Luôn kiểm tra Image mới khi khởi động
     env_file: .env.prod
@@ -115,7 +115,7 @@ Thay `YOUR_DOCKERHUB_USERNAME` bằng username Docker Hub thực tế của bạ
 
 ```bash
 # Copy nginx.conf từ thư mục dự án sang thư mục production
-cp /path/to/khotruyen-ai/nginx/default.conf ./nginx.conf
+cp /path/to/my-app/nginx/default.conf ./nginx.conf
 ```
 
 ---
@@ -193,7 +193,7 @@ GitHub Actions kích hoạt (Bài 3)
 ## Xử lý lỗi thường gặp
 
 **Container không start — "Error: image not found"**
-→ Kiểm tra `DOCKERHUB_USERNAME` trong file compose có đúng không. Chạy `podman pull docker.io/username/khotruyen-ai:latest` để test.
+→ Kiểm tra `DOCKERHUB_USERNAME` trong file compose có đúng không. Chạy `podman pull docker.io/username/my-app:latest` để test.
 
 **Nginx lỗi 502 Bad Gateway**
 → Container `python_app` chưa sẵn sàng. Chờ 10–15 giây hoặc xem log: `podman logs prod_python`.

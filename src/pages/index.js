@@ -74,7 +74,7 @@ function HomepageHeader() {
               <h1 style={{ fontSize: '3rem', margin: 0 }}>👨‍💻</h1>
               <h3 style={{ fontSize: '1.5rem', marginTop: '15px' }}>Portfolio</h3>
               <p style={{ color: '#aaa', fontSize: '0.95rem' }}>
-                Hệ sinh thái khotruyen.ai, sstruyen.ai và các dự án tích hợp Salesforce.
+                Các dự án tích hợp Salesforce, công cụ AI và kinh nghiệm thực chiến.
               </p>
             </Link>
           </div>

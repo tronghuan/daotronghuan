@@ -21,10 +21,10 @@ Sau khi hoàn thành, bạn sẽ:
 
 ## Bước 1: Tạo cấu trúc thư mục
 
-Tạo thư mục gốc `khotruyen-ai` với cấu trúc sau:
+Tạo thư mục gốc `my-app` với cấu trúc sau:
 
 ```text
-khotruyen-ai/
+my-app/
 ├── app/
 │   ├── Dockerfile
 │   ├── requirements.txt
@@ -39,8 +39,8 @@ khotruyen-ai/
 ```
 
 ```bash
-mkdir -p khotruyen-ai/app khotruyen-ai/nginx khotruyen-ai/.github/workflows
-cd khotruyen-ai
+mkdir -p my-app/app my-app/nginx my-app/.github/workflows
+cd my-app
 ```
 
 ---
@@ -107,7 +107,7 @@ server {
 ```env title=".env"
 DB_USER=postgres
 DB_PASSWORD=local_password
-DB_NAME=khotruyen_db
+DB_NAME=my_app_db
 ```
 
 Thêm vào `.gitignore`:

@@ -124,24 +124,6 @@ const CERT_CATEGORY_COLORS = {
 
 const PROJECTS = [
   {
-    emoji: '📚',
-    name: 'KhoTruyen.AI',
-    url: 'https://khotruyen.ai',
-    description:
-      'Nền tảng đọc truyện tích hợp AI — tự động dịch, tóm tắt và gợi ý truyện cá nhân hóa. Xây dựng từ đầu bằng Node.js + React.',
-    tags: ['Node.js', 'React', 'AI', 'Claude API'],
-    status: 'Live',
-  },
-  {
-    emoji: '🌟',
-    name: 'SSStruyen.AI',
-    url: '#',
-    description:
-      'Dự án mở rộng hệ sinh thái truyện — tập trung vào trải nghiệm đọc nhanh và tối ưu SEO cho nội dung do AI tạo ra.',
-    tags: ['SEO', 'Next.js', 'AI Content'],
-    status: 'In Progress',
-  },
-  {
     emoji: '☁️',
     name: 'Salesforce Integration Hub',
     url: '#',

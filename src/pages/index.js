@@ -47,8 +47,9 @@ function HomepageHeader() {
             100% { transform: translateY(0px); }
           }
           .floating-1 { animation: float 6s ease-in-out infinite; }
-          .floating-2 { animation: float 6s ease-in-out infinite 2s; } /* Trễ 2s để lệch nhịp */
-          .floating-3 { animation: float 6s ease-in-out infinite 4s; } /* Trễ 4s để lệch nhịp */
+          .floating-2 { animation: float 6s ease-in-out infinite 1.5s; }
+          .floating-3 { animation: float 6s ease-in-out infinite 3s; }
+          .floating-4 { animation: float 6s ease-in-out infinite 4.5s; }
         `}
       </style>
 
@@ -65,38 +66,49 @@ function HomepageHeader() {
           </p>
         </div>
 
-        {/* 3 Khối trôi nổi */}
+        {/* 4 Khối trôi nổi */}
         <div className="row" style={{ justifyContent: 'center' }}>
 
           {/* Khối 1: Portfolio */}
-          <div className="col col--4 margin-bottom--lg floating-1">
+          <div className="col col--3 margin-bottom--lg floating-1">
             <Link to="/about" className="glass-card">
-              <h1 style={{ fontSize: '3rem', margin: 0 }}>👨‍💻</h1>
-              <h3 style={{ fontSize: '1.5rem', marginTop: '15px' }}>Portfolio</h3>
-              <p style={{ color: '#aaa', fontSize: '0.95rem' }}>
-                Các dự án tích hợp Salesforce, công cụ AI và kinh nghiệm thực chiến.
+              <h1 style={{ fontSize: '2.5rem', margin: 0 }}>👨‍💻</h1>
+              <h3 style={{ fontSize: '1.3rem', marginTop: '12px' }}>Portfolio</h3>
+              <p style={{ color: '#aaa', fontSize: '0.9rem' }}>
+                Kinh nghiệm làm việc, kỹ năng công nghệ và các dự án thực chiến.
               </p>
             </Link>
           </div>
 
           {/* Khối 2: Tech Series */}
-          <div className="col col--4 margin-bottom--lg floating-2">
+          <div className="col col--3 margin-bottom--lg floating-2">
             <Link to="/docs/intro" className="glass-card">
-              <h1 style={{ fontSize: '3rem', margin: 0 }}>⚙️</h1>
-              <h3 style={{ fontSize: '1.5rem', marginTop: '15px' }}>Series Tech</h3>
-              <p style={{ color: '#aaa', fontSize: '0.95rem' }}>
-                Kinh nghiệm tối ưu hệ thống, ứng dụng AI tool (Cursor, Claude) vào coding.
+              <h1 style={{ fontSize: '2.5rem', margin: 0 }}>⚙️</h1>
+              <h3 style={{ fontSize: '1.3rem', marginTop: '12px' }}>Công Việc</h3>
+              <p style={{ color: '#aaa', fontSize: '0.9rem' }}>
+                Hướng dẫn kỹ thuật, kinh nghiệm Salesforce, DevOps, AI và Backend.
               </p>
             </Link>
           </div>
 
-          {/* Khối 3: Cuộc sống & Ngôn ngữ */}
-          <div className="col col--4 margin-bottom--lg floating-3">
+          {/* Khối 3: Cuộc sống */}
+          <div className="col col--3 margin-bottom--lg floating-3">
+            <Link to="/cuoc-song" className="glass-card">
+              <h1 style={{ fontSize: '2.5rem', margin: 0 }}>🏡</h1>
+              <h3 style={{ fontSize: '1.3rem', marginTop: '12px' }}>Cuộc Sống</h3>
+              <p style={{ color: '#aaa', fontSize: '0.9rem' }}>
+                Gia đình, những mốc đáng nhớ và câu chuyện riêng tư.
+              </p>
+            </Link>
+          </div>
+
+          {/* Khối 4: Tán gẫu */}
+          <div className="col col--3 margin-bottom--lg floating-4">
             <Link to="/blog" className="glass-card">
-              <h1 style={{ fontSize: '3rem', margin: 0 }}>🎌</h1>
-              <h3 style={{ fontSize: '1.5rem', marginTop: '15px' }}>Góc Tản Mạn</h3>
-              <p style={{ color: '#aaa', fontSize: '0.95rem' }}>
-                Hành trình luyện thi JLPT N2, review sách và những câu chuyện đời thường.
+              <h1 style={{ fontSize: '2.5rem', margin: 0 }}>☕</h1>
+              <h3 style={{ fontSize: '1.3rem', marginTop: '12px' }}>Tán Gẫu</h3>
+              <p style={{ color: '#aaa', fontSize: '0.9rem' }}>
+                Suy ngẫm, ngẫu hứng và bất kỳ điều gì muốn chia sẻ.
               </p>
             </Link>
           </div>

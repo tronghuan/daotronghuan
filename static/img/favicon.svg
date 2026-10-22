@@ -1,33 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e3a8a"/>
-      <stop offset="100%" style="stop-color:#3b82f6"/>
+      <stop offset="0%" stop-color="#1e1a0d"/>
+      <stop offset="100%" stop-color="#0c0a05"/>
     </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe680"/>
+      <stop offset="45%" stop-color="#d4a017"/>
+      <stop offset="100%" stop-color="#9a7200"/>
+    </linearGradient>
+    <linearGradient id="gold-h" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffe680"/>
+      <stop offset="50%" stop-color="#d4a017"/>
+      <stop offset="100%" stop-color="#ffe680"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="60%" y2="60%">
+      <stop offset="0%" stop-color="rgba(255,230,128,0.12)"/>
+      <stop offset="100%" stop-color="rgba(255,230,128,0)"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
 
   <!-- Shadow -->
-  <rect x="2" y="4" width="62" height="62" rx="13" fill="rgba(0,0,0,0.25)"/>
+  <rect x="3" y="4" width="58" height="58" rx="13" fill="rgba(0,0,0,0.5)"/>
 
-  <!-- Main background -->
-  <rect width="62" height="62" rx="12" fill="url(#bg)"/>
+  <!-- Background -->
+  <rect x="1" y="1" width="62" height="62" rx="12" fill="url(#bg)"/>
 
-  <!-- Top highlight -->
-  <rect x="8" y="6" width="30" height="2" rx="1" fill="rgba(255,255,255,0.2)"/>
+  <!-- Metallic shine -->
+  <rect x="1" y="1" width="62" height="62" rx="12" fill="url(#shine)"/>
 
-  <!-- Border -->
-  <rect x="1" y="1" width="60" height="60" rx="11"
-        fill="none" stroke="rgba(147,197,253,0.4)" stroke-width="1.5"/>
+  <!-- Gold border -->
+  <rect x="2" y="2" width="60" height="60" rx="11"
+        fill="none" stroke="url(#gold)" stroke-width="1.5" opacity="0.85"/>
 
-  <!-- DTH text -->
+  <!-- Diamond accent top -->
+  <polygon points="32,7 35.5,12 32,17 28.5,12"
+           fill="url(#gold)" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- DTH lettering -->
   <text
-    x="31"
-    y="42"
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="24"
+    x="32" y="43"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="19"
     font-weight="bold"
-    fill="white"
+    fill="url(#gold)"
     text-anchor="middle"
-    letter-spacing="1.5"
+    letter-spacing="2.5"
+    filter="url(#glow)"
   >DTH</text>
+
+  <!-- Bottom rule -->
+  <line x1="18" y1="48" x2="46" y2="48"
+        stroke="url(#gold-h)" stroke-width="1" opacity="0.5"/>
 </svg>

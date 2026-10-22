@@ -5,6 +5,24 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from 'prism-react-renderer';
+import { createHash } from 'crypto';
+import { existsSync, readFileSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+// Load .env nếu tồn tại (local dev), CI đã có env var sẵn
+const ROOT = dirname(fileURLToPath(import.meta.url));
+const envFile = join(ROOT, '.env');
+if (existsSync(envFile)) {
+  for (const line of readFileSync(envFile, 'utf8').split('\n')) {
+    const m = line.match(/^([^#=]+)=(.*)/);
+    if (m) process.env[m[1].trim()] = m[2].trim();
+  }
+}
+
+const protectedPasswordHash = process.env.PROTECTED_PASSWORD
+  ? createHash('sha256').update(process.env.PROTECTED_PASSWORD).digest('hex')
+  : '';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -102,6 +120,9 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      customFields: {
+        protectedPasswordHash,
+      },
       colorMode: {
         respectPrefersColorScheme: true,
       },

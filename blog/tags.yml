@@ -1,44 +1,24 @@
-salesforce:
-  label: Salesforce
-  permalink: /salesforce
-  description: Bài viết về Salesforce development, admin và kiến trúc
-
-apex:
-  label: Apex
-  permalink: /apex
-  description: Salesforce Apex programming
-
-lwc:
-  label: LWC
-  permalink: /lwc
-  description: Lightning Web Components
-
-mulesoft:
-  label: MuleSoft
-  permalink: /mulesoft
-  description: MuleSoft integration platform
-
-backend:
-  label: Backend
-  permalink: /backend
-  description: Backend development — Node.js, Python, API
-
-devops:
-  label: DevOps
-  permalink: /devops
-  description: DevOps, CI/CD, Docker, Cloud
-
-ai:
-  label: AI
-  permalink: /ai
-  description: AI tools, prompt engineering, Claude, Cursor
-
 tieng-nhat:
   label: Tiếng Nhật
   permalink: /tieng-nhat
-  description: Hành trình học tiếng Nhật từ N5 đến N3
+  description: Hành trình học tiếng Nhật
 
 cuoc-song:
   label: Cuộc sống
-  permalink: /cuoc-song
-  description: Chia sẻ về cuộc sống và suy nghĩ cá nhân
+  permalink: /cuoc-song-tag
+  description: Chia sẻ về cuộc sống và suy nghĩ
+
+suy-nghi:
+  label: Suy nghĩ
+  permalink: /suy-nghi
+  description: Suy ngẫm, quan sát, góc nhìn cá nhân
+
+review:
+  label: Review
+  permalink: /review
+  description: Review sách, phim, công cụ
+
+du-lich:
+  label: Du lịch
+  permalink: /du-lich
+  description: Những chuyến đi và trải nghiệm

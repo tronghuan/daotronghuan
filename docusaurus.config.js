@@ -11,7 +11,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Đào Trọng Huấn',
-  tagline: 'Góc chia sẻ về IT, Salesforce, Tiếng Nhật và cuộc sống',
+  tagline: 'Góc chia sẻ về công việc, cuộc sống và những suy nghĩ ngẫu hứng',
   favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -62,16 +62,13 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
+          blogTitle: 'Tán Gẫu',
+          blogDescription: 'Suy ngẫm, tản mạn và bất kỳ điều gì muốn chia sẻ.',
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -98,28 +95,24 @@ const config = {
           src: 'img/logo.svg', // Bạn có thể thay file logo.svg của riêng mình vào thư mục static/img sau
         },
         items: [
-          // 1. Nút dẫn vào khu vực Tài liệu / Series Tech
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Series Tech 🚀',
+            label: 'Công Việc ⚙️',
           },
-          // 2. Nút dẫn vào khu vực Blog
+          {
+            to: '/cuoc-song',
+            label: 'Cuộc Sống 🏡',
+            position: 'left',
+          },
           {
             to: '/blog',
-            label: 'Góc Tản Mạn ☕',
-            position: 'left'
+            label: 'Tán Gẫu ☕',
+            position: 'left',
           },
-          // 3. Link trỏ ra ngoài trang X (Twitter) để mọi người kết nối
           {
-            href: 'https://x.com/your-username', // Sửa lại thành link X của bạn
-            label: 'X (Twitter)',
-            position: 'right',
-          },
-          // 4. Link trỏ ra ngoài Github
-          {
-            href: 'https://github.com/tronghuan', // Sửa lại thành link Github của bạn
+            href: 'https://github.com/tronghuan',
             label: 'GitHub',
             position: 'right',
           },
@@ -129,46 +122,22 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Nội dung',
             items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
+              { label: 'Công Việc', to: '/docs/intro' },
+              { label: 'Cuộc Sống', to: '/cuoc-song' },
+              { label: 'Tán Gẫu', to: '/blog' },
             ],
           },
           {
-            title: 'Community',
+            title: 'Về tôi',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
+              { label: 'Portfolio', to: '/about' },
+              { label: 'GitHub', href: 'https://github.com/tronghuan' },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Đào Trọng Huấn`,
       },
       prism: {
         theme: prismThemes.github,

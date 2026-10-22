@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
-    "build:protected": "docusaurus build && node --env-file=.env scripts/protect.mjs",
+    "build:protected": "docusaurus build && node scripts/protect.mjs",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

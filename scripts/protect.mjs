@@ -9,6 +9,16 @@ import { execSync } from 'child_process'
 import { fileURLToPath } from 'url'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
+
+// Load .env nếu tồn tại (local dev), còn CI thì env var đã được set sẵn
+const envFile = join(ROOT, '.env')
+if (existsSync(envFile)) {
+  for (const line of readFileSync(envFile, 'utf8').split('\n')) {
+    const match = line.match(/^([^#=]+)=(.*)$/)
+    if (match) process.env[match[1].trim()] = match[2].trim()
+  }
+}
+
 const SRC_DIR = join(ROOT, 'cuoc-song')
 const BUILD_DIR = join(ROOT, 'build', 'cuoc-song')
 const PASSWORD = process.env.PROTECTED_PASSWORD

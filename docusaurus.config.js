@@ -80,6 +80,23 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'cuoc-song',
+        routeBasePath: 'cuoc-song',
+        path: './cuoc-song',
+        blogTitle: 'Cuộc Sống',
+        blogDescription: 'Gia đình, những mốc đáng nhớ và câu chuyện riêng tư.',
+        showReadingTime: false,
+        onInlineTags: 'warn',
+        onInlineAuthors: 'warn',
+        onUntruncatedBlogPosts: 'ignore',
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

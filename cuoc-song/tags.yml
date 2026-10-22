@@ -1,0 +1,14 @@
+gia-dinh:
+  label: Gia đình
+  permalink: /gia-dinh
+  description: Những câu chuyện về gia đình
+
+moc-quan-trong:
+  label: Mốc quan trọng
+  permalink: /moc-quan-trong
+  description: Những dấu mốc đáng nhớ trong cuộc sống
+
+ca-nhan:
+  label: Cá nhân
+  permalink: /ca-nhan
+  description: Suy nghĩ và trải nghiệm cá nhân
